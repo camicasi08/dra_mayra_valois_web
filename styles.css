@@ -565,6 +565,112 @@ section {
 }
 .service-card:hover .service-arrow { opacity: 0.7; transform: translateX(0); }
 
+/* Success cases */
+#cases {
+  padding: 8rem 4rem;
+  background:
+    linear-gradient(180deg, var(--black) 0%, rgba(17,17,17,0.96) 48%, var(--black) 100%);
+}
+.cases-header {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 420px);
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+.cases-intro {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(245,240,232,0.62);
+}
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.case-card {
+  min-height: 360px;
+  padding: 2.4rem;
+  background:
+    linear-gradient(160deg, rgba(201,168,76,0.08) 0%, transparent 42%),
+    var(--dark);
+  border: 1px solid rgba(201,168,76,0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.case-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 2.4rem 0 2.4rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.case-card:hover::after { opacity: 1; }
+.case-card.featured {
+  border-color: rgba(201,168,76,0.28);
+  background:
+    radial-gradient(ellipse 80% 70% at 70% 10%, rgba(201,168,76,0.14) 0%, transparent 62%),
+    var(--dark);
+}
+.case-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.case-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--white);
+  margin: 3rem 0 1rem;
+}
+.case-card p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(245,240,232,0.58);
+  margin-bottom: 2rem;
+}
+.case-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border-top: 1px solid rgba(201,168,76,0.12);
+  padding-top: 1.2rem;
+}
+.case-results div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.case-results strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 300;
+  color: var(--gold-lt);
+}
+.case-results span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.56rem;
+  font-weight: 200;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(184,184,200,0.68);
+}
+
 /* â”€â”€ EXPERIENCE / WHY â”€â”€ */
 #why {
   padding: 8rem 4rem;
@@ -909,6 +1015,10 @@ footer {
   #services { padding: 5rem 2rem; }
   .services-grid { grid-template-columns: 1fr; }
   .services-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  #cases { padding: 5rem 2rem; }
+  .cases-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cases-grid { grid-template-columns: 1fr; }
+  .case-card { min-height: auto; }
   #why { grid-template-columns: 1fr; padding: 5rem 2rem; gap: 4rem; }
   #testimonials { padding: 5rem 2rem; }
   .testimonials-grid { grid-template-columns: 1fr; }
