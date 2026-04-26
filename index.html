@@ -1,0 +1,573 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dra. Mayra Valois · Odontología Estética y Funcional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor"></div>
+
+<!-- ════ NAV ════ -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-name">Dra. Mayra Valois</span>
+    <span class="nav-logo-sub">Odontología estética y funcional</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">La Doctora</a></li>
+    <li><a href="#services">Servicios</a></li>
+    <li><a href="#why">Filosofía</a></li>
+    <li><a href="#testimonials">Pacientes</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Agendar cita</a>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+
+  <!-- Decorative tooth -->
+  <svg class="hero-tooth" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 20 C60 20 30 50 30 80 C30 110 40 130 50 150 C60 170 65 185 70 185 C75 185 78 170 80 155 C82 140 85 130 100 130 C115 130 118 140 120 155 C122 170 125 185 130 185 C135 185 140 170 150 150 C160 130 170 110 170 80 C170 50 140 20 100 20Z" stroke="#c9a84c" stroke-width="2" fill="none"/>
+    <path d="M65 75 C65 65 72 58 82 58 C88 58 93 61 96 66" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M135 75 C135 65 128 58 118 58 C112 58 107 61 104 66" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Consultorio Dental de Alta Especialidad</div>
+    <h1 class="hero-title">
+      <em>Sonrisas</em> que<br>
+      <span class="name">transforman</span><br>
+      vidas
+    </h1>
+    <p class="hero-subtitle">Odontología estética y funcional · Dra. Mayra Valois</p>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      Cada sonrisa es única. Con tecnología de vanguardia, técnica depurada 
+      y un profundo sentido estético, devolvemos la armonía y confianza que 
+      usted merece.
+    </p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Agendar consulta</a>
+      <a href="#services" class="btn-ghost">Ver servicios</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">12+</div>
+      <div class="stat-label">Años de experiencia</div>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">2k+</div>
+      <div class="stat-label">Pacientes atendidos</div>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">98%</div>
+      <div class="stat-label">Satisfacción</div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Descubrir</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ════ MARQUEE ════ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <!-- duplicated for infinite scroll -->
+    <div class="marquee-item">Odontología Estética <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Blanqueamiento Dental <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Carillas de Porcelana <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Implantes Dentales <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Ortodoncia Invisible <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Rehabilitación Oral <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Odontología Funcional <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Odontología Estética <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Blanqueamiento Dental <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Carillas de Porcelana <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Implantes Dentales <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Ortodoncia Invisible <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Rehabilitación Oral <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Odontología Funcional <span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- ════ ABOUT ════ -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div class="about-frame">
+      <div class="about-corner tl"></div>
+      <div class="about-corner br"></div>
+      <img class="about-photo" src="doc.png" alt="Dra. Mayra Valois en su consultorio dental" loading="lazy"/>
+    </div>
+   <!--  <div class="about-badge">
+      <div class="badge-num">CD</div>
+      <div class="badge-text">Cirujana Dentista</div>
+    </div> -->
+  </div>
+
+  <div class="about-content reveal">
+    <div class="section-label">La Doctora</div>
+    <h2 class="section-title">Una visión <em>única</em><br>de la odontología</h2>
+    <p class="about-lead">
+      "Mi misión es combinar la precisión científica con el arte 
+      para crear sonrisas que reflejen la esencia de cada persona."
+    </p>
+    <p class="about-text">
+      La Dra. Mayra Valois es especialista en odontología estética y funcional con más de 
+      doce años de experiencia transformando sonrisas. Su formación combina rigor clínico 
+      con una sensibilidad estética refinada, ofreciendo tratamientos personalizados que 
+      equilibran salud, función y belleza.
+    </p>
+    <p class="about-text">
+      Comprometida con la educación continua, se mantiene a la vanguardia de las técnicas 
+      y tecnologías más avanzadas del campo odontológico, garantizando a sus pacientes los 
+      mejores resultados posibles.
+    </p>
+    <div class="about-credentials">
+      <span class="credential">Cirujana Dentista</span>
+      <span class="credential">Estética Oral</span>
+      <span class="credential">Implantología</span>
+      <span class="credential">Ortodoncia</span>
+      <span class="credential">Rehabilitación Oral</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SERVICES ════ -->
+<section id="services">
+  <div class="services-header reveal">
+    <div>
+      <div class="section-label">Especialidades</div>
+      <h2 class="section-title">Nuestros <em>servicios</em></h2>
+    </div>
+    <a href="#contacto" class="btn-ghost">Consulta personalizada →</a>
+  </div>
+
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M12 2C9 2 7 4.5 7 7s1 5 2 7c1 2 1.5 4 2 6h2c.5-2 1-4 2-6 1-2 2-4.5 2-7s-2-5-5-5z"/>
+      </svg>
+      <div class="service-name">Odontología Estética</div>
+      <div class="service-desc">Carillas de porcelana, blanqueamiento dental y diseño de sonrisa personalizado para resultados naturales y duraderos.</div>
+      <span class="service-arrow">→</span>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8" stroke-dasharray="3 2"/>
+        <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+      </svg>
+      <div class="service-name">Implantes Dentales</div>
+      <div class="service-desc">Solución permanente y estética para dientes perdidos mediante implantes de titanio con resultados que lucen y funcionan como dientes naturales.</div>
+      <span class="service-arrow">→</span>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M6 3 L6 21 M6 3 C10 3 14 5 14 9 C14 13 10 14 6 14"/>
+        <path d="M14 9 L20 21"/>
+      </svg>
+      <div class="service-name">Ortodoncia Invisible</div>
+      <div class="service-desc">Alineadores transparentes personalizados para corregir la posición de los dientes de forma cómoda, discreta y eficaz.</div>
+      <span class="service-arrow">→</span>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <rect x="3" y="8" width="18" height="10" rx="2"/>
+        <path d="M8 8 C8 5.5 10 4 12 4 C14 4 16 5.5 16 8"/>
+        <line x1="12" y1="11" x2="12" y2="15"/>
+      </svg>
+      <div class="service-name">Rehabilitación Oral</div>
+      <div class="service-desc">Restauración completa de la función masticatoria y estética mediante coronas, puentes y prótesis de alta precisión.</div>
+      <span class="service-arrow">→</span>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M20 7 L12 3 L4 7 L4 17 L12 21 L20 17 Z"/>
+        <polyline points="4,7 12,11 20,7"/>
+        <line x1="12" y1="11" x2="12" y2="21"/>
+      </svg>
+      <div class="service-name">Blanqueamiento Dental</div>
+      <div class="service-desc">Tratamientos profesionales en consultorio y para casa que blanquean varias tonalidades de forma segura y sin sensibilidad.</div>
+      <span class="service-arrow">→</span>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M3 12 C3 7 7 3 12 3 S21 7 21 12 17 21 12 21 3 17 3 12"/>
+        <path d="M8 12 L10.5 14.5 L16 9"/>
+      </svg>
+      <div class="service-name">Odontología Preventiva</div>
+      <div class="service-desc">Protocolos de limpieza profesional, selladores dentales y planes de mantenimiento personalizados para conservar su salud bucal.</div>
+      <span class="service-arrow">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ WHY ════ -->
+<section id="why">
+  <div class="why-content reveal">
+    <div class="section-label">Nuestra filosofía</div>
+    <h2 class="section-title">La <em>excelencia</em><br>como estándar</h2>
+    <p class="why-desc">
+      Cada tratamiento en nuestro consultorio está guiado por tres principios 
+      fundamentales: precisión técnica, materiales de primer nivel y una atención 
+      personalizada que coloca al paciente en el centro de cada decisión.
+    </p>
+
+    <div class="why-features">
+      <div class="why-feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L15 9H22L16.5 13.5L18.5 21L12 16.5L5.5 21L7.5 13.5L2 9H9L12 2Z"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h4>Tecnología de vanguardia</h4>
+          <p>Equipos de última generación para diagnóstico, planificación y tratamiento con máxima precisión y confort.</p>
+        </div>
+      </div>
+
+      <div class="why-feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h4>Atención personalizada</h4>
+          <p>Cada plan de tratamiento es diseñado exclusivamente para las necesidades, anatomía y objetivos estéticos de cada paciente.</p>
+        </div>
+      </div>
+
+      <div class="why-feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h4>Materiales certificados</h4>
+          <p>Utilizamos exclusivamente materiales biocompatibles de marcas líderes con certificación internacional.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-visual reveal">
+    <div class="why-panel">
+      <p class="panel-quote">
+        La verdadera belleza de una sonrisa no está en su perfección, 
+        sino en su armonía con quien la lleva.
+      </p>
+      <div class="panel-author">
+        <div class="author-line"></div>
+        <span class="author-name">Dra. Mayra Valois</span>
+      </div>
+    </div>
+    <div class="why-metrics">
+      <div class="metric">
+        <div class="metric-val">12+</div>
+        <div class="metric-label">Años de experiencia</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">2,000+</div>
+        <div class="metric-label">Pacientes</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">98%</div>
+        <div class="metric-label">Satisfacción</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">6</div>
+        <div class="metric-label">Especialidades</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TESTIMONIALS ════ -->
+<section id="testimonials">
+  <div class="testimonials-header reveal">
+    <div class="section-label">Testimonios</div>
+    <h2 class="section-title">Lo que dicen<br>nuestros <em>pacientes</em></h2>
+  </div>
+
+  <div class="testimonials-grid reveal">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-text">
+        "Las carillas de porcelana cambiaron completamente mi vida. El resultado es tan natural 
+        que nadie cree que son carillas. La Dra. Valois tiene un ojo increíble para la estética."
+      </p>
+      <div class="testimonial-name">Gabriela M.</div>
+      <div class="testimonial-role">Carillas de porcelana</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-text">
+        "Me colocaron dos implantes y quedé maravillado con la atención y el resultado. 
+        Un proceso totalmente sin dolor y con un seguimiento impecable. 100% recomendado."
+      </p>
+      <div class="testimonial-name">Roberto A.</div>
+      <div class="testimonial-role">Implantes dentales</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-text">
+        "Hice mi tratamiento de ortodoncia invisible y estoy feliz con los resultados. 
+        La Dra. Valois explicó cada paso y se nota que genuinamente le apasiona su trabajo."
+      </p>
+      <div class="testimonial-name">Sofía L.</div>
+      <div class="testimonial-role">Ortodoncia invisible</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTACT ════ -->
+<section id="contacto">
+  <div class="contact-content reveal">
+    <div class="section-label">Contacto</div>
+    <h2 class="section-title">Inicie su<br><em>transformación</em></h2>
+    <p class="contact-desc">
+      Agende su consulta inicial y descubra cómo podemos crear 
+      la sonrisa que siempre ha soñado. La primera evaluación 
+      incluye diagnóstico fotográfico y plan de tratamiento personalizado.
+    </p>
+
+    <div class="contact-items">
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.77 1.2 2 2 0 012.76 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.08-1.08a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Teléfono</div>
+          <div class="contact-item-val">+57 319-433-4443</div>
+        </div>
+      </div>
+
+      <div class="contact-item contact-location">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Ubicación</div>
+          <div class="contact-item-val">Cali, Colombia</div>
+          <div class="contact-item-val">Calle 2a Oeste #73d -06 </div>
+          <div class="contact-map" aria-label="Mapa de ubicación en Google Maps">
+            <iframe
+              title="Ubicación Dra. Mayra Valois en Google Maps"
+              src="https://www.google.com/maps?cid=15019431473099840493&z=17&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Horario</div>
+          <div class="contact-item-val">Lun – Vie: 9:00 – 18:00 · Sáb: 9:00 – 12:30</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-val">contacto@mayravalois.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form class="contact-form reveal" id="consultation-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="first-name">Nombre</label>
+        <input id="first-name" name="firstName" type="text" placeholder="Tu nombre" required/>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Apellido</label>
+        <input id="last-name" name="lastName" type="text" placeholder="Tu apellido" required/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input id="email" name="email" type="email" placeholder="tu@correo.com"/>
+    </div>
+    <div class="form-group">
+      <label for="phone">Teléfono</label>
+      <input id="phone" name="phone" type="tel" placeholder="+57 000-000-0000" required/>
+    </div>
+    <!-- <div class="form-group">
+      <label>Servicio de interés</label>
+      <select>
+        <option value="" disabled selected>Selecciona un servicio</option>
+        <option>Odontología Estética</option>
+        <option>Implantes Dentales</option>
+        <option>Ortodoncia Invisible</option>
+        <option>Rehabilitación Oral</option>
+        <option>Blanqueamiento Dental</option>
+        <option>Odontología Preventiva</option>
+        <option>Consulta general</option>
+      </select>
+    </div> -->
+    <div class="form-group">
+      <label for="message">Mensaje (opcional)</label>
+      <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu caso…"></textarea>
+    </div>
+    <button type="submit" class="btn-primary" style="width:100%; padding:1.2rem; font-size:0.72rem; cursor:none;">
+      Solicitar consulta
+    </button>
+  </form>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div>
+    <div class="footer-brand">Dra. Mayra Valois</div>
+    <div class="footer-sub">Odontología estética y funcional</div>
+  </div>
+  <div class="footer-copy">© 2025 Dra. Mayra Valois · Todos los derechos reservados</div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/dra.mayravalois" class="social-link" title="Instagram" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/people/Dra-Mayra-Valois/100049261369978/" class="social-link" title="Facebook" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+      </svg>
+    </a>
+    <a href="#" class="social-link" title="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  });
+  document.querySelectorAll('a, button, .service-card').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+  });
+
+  // Sticky nav
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // WhatsApp consultation request
+  const consultationForm = document.getElementById('consultation-form');
+  consultationForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    if (!consultationForm.reportValidity()) return;
+
+    const formData = new FormData(consultationForm);
+    const firstName = formData.get('firstName').trim();
+    const lastName = formData.get('lastName').trim();
+    const email = formData.get('email').trim();
+    const phone = formData.get('phone').trim();
+    const message = formData.get('message').trim();
+
+    const whatsappMessage = [
+      'Hola Dra. Mayra Valois, me gustaría solicitar una consulta.',
+      '',
+      `Nombre: ${firstName} ${lastName}`,
+      `Teléfono: ${phone}`,
+      email ? `Correo: ${email}` : '',
+      message ? `Mensaje: ${message}` : ''
+    ].filter(Boolean).join('\n');
+
+    const whatsappUrl = `https://wa.me/573194334443?text=${encodeURIComponent(whatsappMessage)}`;
+    window.location.href = whatsappUrl;
+  });
+</script>
+</body>
+</html>
