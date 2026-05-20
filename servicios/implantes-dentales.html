@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Implantes dentales en Cali con la Dra. Mayra Valois: reemplazo de dientes perdidos con planificación, estética y función."/>
+  <title>Implantes Dentales | Dra. Mayra Valois</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+</head>
+<body class="service-detail-body">
+<div id="cursor"></div>
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><span class="nav-logo-text"><span class="nav-logo-name">Dra. Mayra Valois</span><span class="nav-logo-sub">Odontología estética y funcional</span></span></a>
+  <ul class="nav-links"><li><a href="../index.html#about">La Doctora</a></li><li><a href="../index.html#services">Servicios</a></li><li><a href="../index.html#cases">Casos</a></li><li><a href="../index.html#contacto">Contacto</a></li></ul>
+  <a href="../index.html#contacto" class="nav-cta">Agendar cita</a>
+</nav>
+<main class="service-detail-main">
+  <section class="service-hero">
+    <div><a class="service-breadcrumb" href="../index.html#services">Servicios / Implantes Dentales</a><h1 class="service-hero-title">Implantes <em>Dentales</em></h1><p class="service-hero-lead">Una alternativa estable para reemplazar dientes perdidos y recuperar seguridad al sonreír, hablar y masticar.</p></div>
+    <div class="service-hero-panel"><p>Un implante dental funciona como una raíz artificial sobre la que se coloca una corona o prótesis. El proceso requiere diagnóstico, planeación del hueso disponible y diseño de una restauración que se integre con el resto de la sonrisa.</p><a href="../index.html#contacto" class="btn-primary">Agendar valoración</a></div>
+  </section>
+  <section class="service-detail-section">
+    <div class="service-detail-grid reveal"><div><div class="service-kicker">Qué implica</div><h2 class="service-detail-title">Estabilidad, función y estética</h2></div><div class="service-copy"><p>El tratamiento inicia con una evaluación clínica y radiográfica para confirmar si hay suficiente soporte óseo y encías saludables.</p><p>Luego se define la posición del implante y el tipo de restauración. La meta no es solo reemplazar una pieza, sino devolver función y apariencia natural.</p></div></div>
+    <div class="service-step-grid reveal"><div class="service-step"><span>01</span><h3>Evaluación integral</h3><p>Revisión del caso, antecedentes, estructura ósea, encías y necesidades funcionales.</p></div><div class="service-step"><span>02</span><h3>Plan quirúrgico</h3><p>Definición de posición, tiempos y restauración para lograr integración y estabilidad.</p></div><div class="service-step"><span>03</span><h3>Restauración final</h3><p>Colocación de la corona o prótesis diseñada para verse y funcionar como parte de la sonrisa.</p></div></div>
+  </section>
+  <section class="service-results"><div class="results-header reveal"><div><div class="service-kicker">Resultados</div><h2 class="service-detail-title">Casos de implantes</h2></div><p class="results-note">Espacio reservado para un carrusel de resultados, evolución clínica o restauraciones finales.</p></div><div class="results-carousel-placeholder reveal"><div class="result-slot"><span>Resultado 01</span></div><div class="result-slot"><span>Resultado 02</span></div><div class="result-slot"><span>Resultado 03</span></div></div></section>
+  <section class="service-cta-band"><div><h2>Recupere confianza al masticar y sonreír</h2><p>Una consulta permite saber si los implantes son la opción indicada y qué pasos requiere su caso.</p></div><a href="../index.html#contacto" class="btn-primary">Solicitar consulta</a></section>
+</main>
+<footer><div><div class="footer-brand">Dra. Mayra Valois</div><div class="footer-sub">Odontología estética y funcional</div></div><div class="footer-copy">© 2025 Dra. Mayra Valois · Todos los derechos reservados</div></footer>
+<script>const cursor=document.getElementById('cursor');document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a, button').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hovered'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hovered'))});const nav=document.getElementById('navbar');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));</script>
+</body>
+</html>

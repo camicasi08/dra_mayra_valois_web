@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Odontología estética con la Dra. Mayra Valois en Cali: diseño de sonrisa, carillas y armonización dental con resultados naturales."/>
+  <title>Odontología Estética | Dra. Mayra Valois</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+</head>
+<body class="service-detail-body">
+<div id="cursor"></div>
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <span class="nav-logo-text">
+      <span class="nav-logo-name">Dra. Mayra Valois</span>
+      <span class="nav-logo-sub">Odontología estética y funcional</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#about">La Doctora</a></li>
+    <li><a href="../index.html#services">Servicios</a></li>
+    <li><a href="../index.html#cases">Casos</a></li>
+    <li><a href="../index.html#contacto">Contacto</a></li>
+  </ul>
+  <a href="../index.html#contacto" class="nav-cta">Agendar cita</a>
+</nav>
+
+<main class="service-detail-main">
+  <section class="service-hero">
+    <div>
+      <a class="service-breadcrumb" href="../index.html#services">Servicios / Odontología Estética</a>
+      <h1 class="service-hero-title">Odontología <em>Estética</em></h1>
+      <p class="service-hero-lead">Tratamientos enfocados en mejorar la apariencia de la sonrisa sin perder naturalidad, función ni armonía con el rostro.</p>
+    </div>
+    <div class="service-hero-panel">
+      <p>La odontología estética puede incluir diseño de sonrisa, carillas, restauraciones estéticas y ajustes de proporción, color o forma dental. El objetivo es crear un resultado bello, saludable y coherente con cada paciente.</p>
+      <a href="../index.html#contacto" class="btn-primary">Agendar valoración</a>
+    </div>
+  </section>
+
+  <section class="service-detail-section">
+    <div class="service-detail-grid reveal">
+      <div>
+        <div class="service-kicker">Qué implica</div>
+        <h2 class="service-detail-title">Planificar antes de transformar</h2>
+      </div>
+      <div class="service-copy">
+        <p>Antes de iniciar, se evalúa la salud oral, la mordida, las proporciones faciales, la forma de los dientes y las expectativas del paciente.</p>
+        <p>Con esa información se define un plan que puede ser conservador o más integral según el caso. La prioridad es preservar estructura dental sana y lograr un resultado que no se vea artificial.</p>
+      </div>
+    </div>
+    <div class="service-step-grid reveal">
+      <div class="service-step"><span>01</span><h3>Diagnóstico estético</h3><p>Registro fotográfico, análisis facial y revisión clínica para entender qué necesita mejorar la sonrisa.</p></div>
+      <div class="service-step"><span>02</span><h3>Diseño del plan</h3><p>Selección de técnicas, materiales y secuencia del tratamiento según función, color, forma y proporción.</p></div>
+      <div class="service-step"><span>03</span><h3>Ejecución cuidada</h3><p>Tratamiento por etapas con control de detalles para lograr una sonrisa armónica y estable.</p></div>
+    </div>
+  </section>
+
+  <section class="service-results">
+    <div class="results-header reveal">
+      <div>
+        <div class="service-kicker">Resultados</div>
+        <h2 class="service-detail-title">Casos de odontología estética</h2>
+      </div>
+      <p class="results-note">Área preparada para integrar un carrusel de antes y después, fotografías clínicas o secuencia del tratamiento.</p>
+    </div>
+    <div class="results-carousel-placeholder reveal">
+      <div class="result-slot"><span>Resultado 01</span></div>
+      <div class="result-slot"><span>Resultado 02</span></div>
+      <div class="result-slot"><span>Resultado 03</span></div>
+    </div>
+  </section>
+
+  <section class="service-cta-band">
+    <div>
+      <h2>Una sonrisa diseñada con intención</h2>
+      <p>La valoración permite definir si este tratamiento es adecuado y qué alternativas ofrecen el mejor resultado para su caso.</p>
+    </div>
+    <a href="../index.html#contacto" class="btn-primary">Solicitar consulta</a>
+  </section>
+</main>
+
+<footer>
+  <div><div class="footer-brand">Dra. Mayra Valois</div><div class="footer-sub">Odontología estética y funcional</div></div>
+  <div class="footer-copy">© 2025 Dra. Mayra Valois · Todos los derechos reservados</div>
+</footer>
+<script>
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+  document.querySelectorAll('a, button').forEach(el => { el.addEventListener('mouseenter', () => cursor.classList.add('hovered')); el.addEventListener('mouseleave', () => cursor.classList.remove('hovered')); });
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+  const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

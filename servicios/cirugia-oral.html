@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Cirugía oral en Cali con la Dra. Mayra Valois: procedimientos quirúrgicos dentales planificados con cuidado y seguimiento."/>
+  <title>Cirugía Oral | Dra. Mayra Valois</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+</head>
+<body class="service-detail-body">
+<div id="cursor"></div>
+<nav id="navbar"><a href="../index.html" class="nav-logo"><span class="nav-logo-text"><span class="nav-logo-name">Dra. Mayra Valois</span><span class="nav-logo-sub">Odontología estética y funcional</span></span></a><ul class="nav-links"><li><a href="../index.html#about">La Doctora</a></li><li><a href="../index.html#services">Servicios</a></li><li><a href="../index.html#cases">Casos</a></li><li><a href="../index.html#contacto">Contacto</a></li></ul><a href="../index.html#contacto" class="nav-cta">Agendar cita</a></nav>
+<main class="service-detail-main">
+  <section class="service-hero"><div><a class="service-breadcrumb" href="../index.html#services">Servicios / Cirugía Oral</a><h1 class="service-hero-title">Cirugía <em>Oral</em></h1><p class="service-hero-lead">Procedimientos quirúrgicos orales planificados para resolver condiciones dentales o de tejidos con técnica cuidadosa.</p></div><div class="service-hero-panel"><p>La cirugía oral puede incluir extracciones, manejo de piezas retenidas, procedimientos preprotésicos o intervenciones sobre tejidos blandos. Cada caso requiere diagnóstico y explicación clara de riesgos, cuidados y tiempos de recuperación.</p><a href="../index.html#contacto" class="btn-primary">Agendar valoración</a></div></section>
+  <section class="service-detail-section"><div class="service-detail-grid reveal"><div><div class="service-kicker">Qué implica</div><h2 class="service-detail-title">Planear cada detalle antes de intervenir</h2></div><div class="service-copy"><p>Antes de cualquier procedimiento se revisa la historia clínica, se solicita la imagen diagnóstica necesaria y se define la técnica más conservadora posible.</p><p>El acompañamiento posoperatorio es parte esencial del tratamiento para controlar inflamación, dolor, cicatrización y signos de alerta.</p></div></div><div class="service-step-grid reveal"><div class="service-step"><span>01</span><h3>Diagnóstico quirúrgico</h3><p>Evaluación clínica e imagenológica para definir indicación, complejidad y cuidados.</p></div><div class="service-step"><span>02</span><h3>Procedimiento</h3><p>Intervención con técnica planificada, manejo cuidadoso de tejidos y control clínico.</p></div><div class="service-step"><span>03</span><h3>Recuperación</h3><p>Indicaciones, controles y seguimiento para una cicatrización adecuada.</p></div></div></section>
+  <section class="service-results"><div class="results-header reveal"><div><div class="service-kicker">Resultados</div><h2 class="service-detail-title">Casos de cirugía oral</h2></div><p class="results-note">Espacio listo para carrusel con imágenes clínicas, evolución o resultados posoperatorios.</p></div><div class="results-carousel-placeholder reveal"><div class="result-slot"><span>Resultado 01</span></div><div class="result-slot"><span>Resultado 02</span></div><div class="result-slot"><span>Resultado 03</span></div></div></section>
+  <section class="service-cta-band"><div><h2>Una cirugía bien indicada empieza con buen diagnóstico</h2><p>La valoración permite confirmar si el procedimiento es necesario y cómo prepararse de forma adecuada.</p></div><a href="../index.html#contacto" class="btn-primary">Solicitar consulta</a></section>
+</main>
+<footer><div><div class="footer-brand">Dra. Mayra Valois</div><div class="footer-sub">Odontología estética y funcional</div></div><div class="footer-copy">© 2025 Dra. Mayra Valois · Todos los derechos reservados</div></footer>
+<script>const cursor=document.getElementById('cursor');document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a, button').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('hovered'));el.addEventListener('mouseleave',()=>cursor.classList.remove('hovered'))});const nav=document.getElementById('navbar');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));</script>
+</body>
+</html>
