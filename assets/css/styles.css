@@ -1,4 +1,4 @@
-﻿*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
   --black:    #0a0a0a;
@@ -22,7 +22,7 @@ body {
   overflow-x: hidden;
 }
 
-/* â”€â”€ CURSOR â”€â”€ */
+/* -- CURSOR -- */
 body { cursor: none; }
 #cursor {
   position: fixed; top: 0; left: 0; z-index: 9999;
@@ -36,7 +36,7 @@ body { cursor: none; }
 }
 #cursor.hovered { width: 40px; height: 40px; background: var(--gold-lt); }
 
-/* â”€â”€ NOISE OVERLAY â”€â”€ */
+/* -- NOISE OVERLAY -- */
 body::before {
   content: '';
   position: fixed; inset: 0; z-index: 0;
@@ -46,7 +46,7 @@ body::before {
   opacity: 0.35;
 }
 
-/* â”€â”€ NAV â”€â”€ */
+/* -- NAV -- */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
@@ -131,7 +131,7 @@ nav.scrolled { background: rgba(10,10,10,0.97); }
 }
 .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
 
-/* â”€â”€ HERO â”€â”€ */
+/* -- HERO -- */
 #hero {
   position: relative;
   min-height: 100vh;
@@ -330,7 +330,7 @@ nav.scrolled { background: rgba(10,10,10,0.97); }
   animation: scrollPulse 2s infinite;
 }
 
-/* â”€â”€ MARQUEE â”€â”€ */
+/* -- MARQUEE -- */
 .marquee-wrap {
   position: relative; z-index: 2;
   border-top: 1px solid rgba(201,168,76,0.15);
@@ -361,7 +361,7 @@ nav.scrolled { background: rgba(10,10,10,0.97); }
   flex-shrink: 0;
 }
 
-/* â”€â”€ SECTIONS â”€â”€ */
+/* -- SECTIONS -- */
 section {
   position: relative; z-index: 2;
 }
@@ -392,7 +392,7 @@ section {
 }
 .section-title em { font-style: italic; color: var(--gold-lt); }
 
-/* â”€â”€ ABOUT â”€â”€ */
+/* -- ABOUT -- */
 #about {
   padding: 8rem 4rem;
   display: grid;
@@ -498,7 +498,7 @@ section {
   padding: 0.4rem 0.9rem;
 }
 
-/* â”€â”€ SERVICES â”€â”€ */
+/* -- SERVICES -- */
 #services {
   padding: 8rem 4rem;
   background: linear-gradient(180deg, var(--black) 0%, var(--charcoal) 50%, var(--black) 100%);
@@ -829,6 +829,13 @@ section {
   filter: saturate(0.92) contrast(1.04);
   margin-bottom: 1.7rem;
 }
+.case-lightbox-source {
+  cursor: none;
+}
+.case-lightbox-source:focus-visible {
+  outline: 1px solid var(--gold-lt);
+  outline-offset: 4px;
+}
 .case-carousel {
   position: relative;
   width: 100%;
@@ -853,10 +860,12 @@ section {
   transform: scale(1.015);
   transition: opacity 0.45s ease, transform 0.45s ease;
   filter: saturate(0.94) contrast(1.04);
+  pointer-events: none;
 }
 .case-carousel-image.active {
   opacity: 1;
   transform: scale(1);
+  pointer-events: auto;
 }
 .case-carousel::after {
   content: '';
@@ -974,8 +983,103 @@ section {
   text-transform: uppercase;
   color: rgba(184,184,200,0.68);
 }
+.case-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.25rem, 4vw, 4rem);
+  background:
+    radial-gradient(circle at 50% 38%, rgba(70,70,70,0.34), transparent 34%),
+    linear-gradient(135deg, rgba(5,5,5,0.96) 0%, rgba(18,18,18,0.97) 52%, rgba(0,0,0,0.94) 100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+.case-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.case-lightbox-image {
+  display: block;
+  max-width: min(92vw, 1120px);
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid rgba(229,201,122,0.36);
+  background: var(--black);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.58);
+  transform: scale(0.96);
+  transition: transform 0.28s ease;
+}
+.case-lightbox.active .case-lightbox-image {
+  transform: scale(1);
+}
+.case-lightbox-close {
+  position: fixed;
+  top: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
+  z-index: 1001;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(229,201,122,0.42);
+  background: rgba(10,10,10,0.66);
+  color: var(--gold-lt);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.case-lightbox-close:hover,
+.case-lightbox-close:focus-visible {
+  border-color: var(--gold-lt);
+  background: rgba(10,10,10,0.86);
+  transform: translateY(-1px);
+  outline: none;
+}
+.case-lightbox-nav {
+  position: fixed;
+  top: 50%;
+  z-index: 1001;
+  width: clamp(42px, 6vw, 58px);
+  height: clamp(42px, 6vw, 58px);
+  transform: translateY(-50%);
+  border: 1px solid rgba(245,240,232,0.22);
+  background: rgba(10,10,10,0.58);
+  color: var(--white);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.case-lightbox-nav.prev {
+  left: clamp(1rem, 4vw, 3rem);
+}
+.case-lightbox-nav.next {
+  right: clamp(1rem, 4vw, 3rem);
+}
+.case-lightbox-nav:hover,
+.case-lightbox-nav:focus-visible {
+  border-color: rgba(245,240,232,0.52);
+  background: rgba(10,10,10,0.82);
+  transform: translateY(-50%) scale(1.04);
+  outline: none;
+}
 
-/* â”€â”€ EXPERIENCE / WHY â”€â”€ */
+/* -- EXPERIENCE / WHY -- */
 #why {
   padding: 8rem 4rem;
   display: grid;
@@ -1094,7 +1198,7 @@ section {
   margin-top: 0.2rem;
 }
 
-/* â”€â”€ TESTIMONIALS â”€â”€ */
+/* -- TESTIMONIALS -- */
 #testimonials {
   padding: 8rem 4rem;
   background: var(--charcoal);
@@ -1145,7 +1249,7 @@ section {
   margin-top: 0.2rem;
 }
 
-/* â”€â”€ CONTACT â”€â”€ */
+/* -- CONTACT -- */
 #contacto {
   padding: 8rem 4rem;
   display: grid;
@@ -1239,7 +1343,7 @@ section {
 .form-group select option { background: var(--dark); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
-/* â”€â”€ FOOTER â”€â”€ */
+/* -- FOOTER -- */
 footer {
   position: relative; z-index: 2;
   border-top: 1px solid rgba(201,168,76,0.12);
@@ -1284,7 +1388,7 @@ footer {
 .social-link:hover { border-color: var(--gold); color: var(--gold); }
 .social-link svg { width: 14px; height: 14px; }
 
-/* â”€â”€ ANIMATIONS â”€â”€ */
+/* -- ANIMATIONS -- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1308,7 +1412,7 @@ footer {
   transform: translateY(0);
 }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* -- RESPONSIVE -- */
 @media (max-width: 900px) {
   nav { padding: 1.4rem 2rem; }
   .nav-logo-img { width: 42px; }
