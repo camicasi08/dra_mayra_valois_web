@@ -26,7 +26,7 @@
 - Location: Cali, Colombia.
 - Contact data appears in schema and should stay consistent across pages:
   - Phone: `+57 319 433 4443`
-  - Email: `contacto@mayravalois.com`
+  - Email: `dramayravalois@gmail.com`
   - Address: `Calle 2a Oeste #73d -06`, Cali, Colombia
 - Social profiles currently referenced:
   - Instagram: `https://www.instagram.com/dra.mayravalois`
@@ -60,6 +60,19 @@ Existing service directories include:
 - If modifying UI, verify text does not overlap or overflow on small screens.
 - If adding images, keep paths local, use descriptive filenames, and consider weight/performance.
 - If committing, review for accidental secrets or private data before staging.
+
+## S3 Deployment
+- Deployment script: `scripts/deploy-s3.ps1`.
+- Production target: `may-valois-web-prod` in `us-east-1`.
+- Authenticate with AWS SSO before deploying: `aws login`.
+- Run from the repository root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\deploy-s3.ps1 -BucketName may-valois-web-prod -Region us-east-1
+```
+
+- The script synchronizes `assets/` and `servicios/` with `--delete`, uploads the HTML crawl files, and configures public S3 website hosting. It may create the bucket if it does not exist.
+- Deploy only when explicitly requested. Confirm the AWS session is valid first with `aws sts get-caller-identity`.
 
 ## Session Startup Prompt
 When starting a future session, ask Codex to:
